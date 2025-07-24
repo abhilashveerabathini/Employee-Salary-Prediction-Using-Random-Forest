@@ -23,12 +23,19 @@ Accurately predicting salaries based on employee profiles is crucial for HR plan
 
 - File: `adult3.csv`
 - Features:
-  - `experience` (numerical)
-  - `education` (categorical)
-  - `job_title` (categorical)
-  - `location` (categorical)
-  - `gender` (categorical)
-  - `salary` (target variable, numerical)
+  - age: Numerical
+  - workclass: Categorical
+  - fnlwgt: Numerical
+  - educational-num: Numerical
+  - marital-status: Categorical
+  - occupation: Categorical
+  - relationship: Categorical
+  - race: Categorical
+  - gender: Categorical
+  - capital-gain: Numerical
+  - capital-loss: Numerical
+  - hours-per-week: Numerical
+  - native-country: Categorical
 
 ---
 
@@ -60,22 +67,21 @@ Accurately predicting salaries based on employee profiles is crucial for HR plan
 
 ## 💡 Sample Prediction
 
-```python
-sample_input = {
-    'age': 25,
-    'workclass': 'Private',
-    'fnlwgt': 226802, # Added fnlwgt
-    'educational-num': 13,
-    'marital-status':'Married-civ-spouse',
-    'occupation':'Exec-managerial',
-    'relationship':'Husband',
-    'race':'White',
-    'gender':'Male',
-    'capital-gain': 0,
-    'capital-loss': 0,
-    'hours-per-week': 40,
-    'native-country': 'United-States'
-}
+Features:
+  - age: Numerical
+  - workclass: Categorical
+  - fnlwgt: Numerical
+  - educational-num: Numerical
+  - marital-status: Categorical
+  - occupation: Categorical
+  - relationship: Categorical
+  - race: Categorical
+  - gender: Categorical
+  - capital-gain: Numerical
+  - capital-loss: Numerical
+  - hours-per-week: Numerical
+  - native-country: Categorical
 
-# Predicted Output
-Predicted Salary: <50 USD$
+Target:
+  - income: Categorical (e.g., <=50K, >50K)
+
